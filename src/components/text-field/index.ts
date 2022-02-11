@@ -18,7 +18,7 @@ export function init() {
                 display: flex;
                 flex-direction: column;
                 font-size: 18px;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 margin: auto;
             }
             input{
@@ -27,7 +27,7 @@ export function init() {
                 max-width: 353px;
                 height: 55px;
                 font-size: 18px;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 border-radius: 4px;
                 background-color: #c3c3c3;
                 border: none;
@@ -36,7 +36,7 @@ export function init() {
 
       div.innerHTML = `
       <label>${label}</label>
-      <input placeholder="Ingrese su ${label}"></input>
+      <input name="nombre" placeholder="Ingrese su ${label}"></input>
       `      
 
       var shadow = this.attachShadow({ mode: "open" });

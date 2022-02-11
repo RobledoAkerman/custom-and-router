@@ -466,6 +466,9 @@ var _index7 = require("./components/button-outlined/index");
 var _index8 = require("./components/footer/index");
 var _index9 = require("./components/select/index");
 var _router = require("./router");
+var _state = require("./state");
+var _bienvenidaComp = require("./components/bienvenida-comp");
+var _datosComp = require("./components/datos-comp");
 (function main() {
     _index.init();
     _index1.init();
@@ -477,11 +480,14 @@ var _router = require("./router");
     _index7.init();
     _index8.init();
     _index9.init();
+    _state.state.setState({
+        nombre: "Danie"
+    });
     const root = document.querySelector(".root");
     _router.initRouter(root);
 })();
 
-},{"./components/header/index":"1WBLn","./components/titulo/index":"9uXEu","./components/subtitulo/index":"2Ahja","./components/text-field/index":"l7C0L","./components/button-solid/index":"j8VIu","./components/large/index":"bTDjE","./components/body/index":"ixZLO","./components/button-outlined/index":"gd9yD","./components/footer/index":"4nDUJ","./components/select/index":"NgClI","./router":"b2iia"}],"1WBLn":[function(require,module,exports) {
+},{"./components/header/index":"1WBLn","./components/titulo/index":"9uXEu","./components/subtitulo/index":"2Ahja","./components/text-field/index":"l7C0L","./components/button-solid/index":"j8VIu","./components/large/index":"bTDjE","./components/body/index":"ixZLO","./components/button-outlined/index":"gd9yD","./components/footer/index":"4nDUJ","./components/select/index":"NgClI","./router":"b2iia","./components/bienvenida-comp":"cVapm","./components/datos-comp":"3f7yE","./state":"28XHA"}],"1WBLn":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "init", ()=>init
@@ -614,8 +620,8 @@ function init() {
             var style = document.createElement("style");
             div.classList.add("root");
             div.textContent = label;
-            style.textContent = `\n  \n            .root{\n                display: flex;\n                flex-direction: column;\n                font-size: 18px;\n                font-family: 'Roboto', sans-serif;\n                margin: auto;\n            }\n            input{\n                display: flex;\n                min-width: 312px;\n                max-width: 353px;\n                height: 55px;\n                font-size: 18px;\n                font-family: 'Roboto', sans-serif;\n                border-radius: 4px;\n                background-color: #c3c3c3;\n                border: none;\n            }\n            `;
-            div.innerHTML = `\n      <label>${label}</label>\n      <input placeholder="Ingrese su ${label}"></input>\n      `;
+            style.textContent = `\n  \n            .root{\n                display: flex;\n                flex-direction: column;\n                font-size: 18px;\n                font-family: 'Poppins', sans-serif;\n                margin: auto;\n            }\n            input{\n                display: flex;\n                min-width: 312px;\n                max-width: 353px;\n                height: 55px;\n                font-size: 18px;\n                font-family: 'Poppins', sans-serif;\n                border-radius: 4px;\n                background-color: #c3c3c3;\n                border: none;\n            }\n            `;
+            div.innerHTML = `\n      <label>${label}</label>\n      <input name="nombre" placeholder="Ingrese su ${label}"></input>\n      `;
             var shadow = this.attachShadow({
                 mode: "open"
             });
@@ -643,7 +649,7 @@ function init() {
             var style = document.createElement("style");
             div.classList.add("root");
             div.textContent = label;
-            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: 100%;\n              height: 55px;\n              background-color: rgb(7, 158, 158);\n              border-radius: 4px;\n              font-family: 'Roboto', sans-serif;\n              font-size: 22px;\n            }\n            .root:hover{\n              background-color: rgb(15, 197, 197);\n            }\n            `;
+            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: 100%;\n              height: 55px;\n              background-color: rgb(7, 158, 158);\n              border-radius: 4px;\n              font-family: 'Poppins', sans-serif;\n              font-size: 22px;\n            }\n            .root:hover{\n              background-color: rgb(15, 197, 197);\n            }\n            `;
             var shadow = this.attachShadow({
                 mode: "open"
             });
@@ -727,7 +733,7 @@ function init() {
             var style = document.createElement("style");
             div.classList.add("root");
             div.textContent = label;
-            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: calc(100% - 4px);\n              height: 55px;\n              background-color: white;\n              border: solid 2px;\n              border-radius: 4px;\n              border-color: rgb(7, 158, 158);\n              font-family: 'Roboto', sans-serif;\n              font-size: 22px;\n            }\n            .root:hover{\n              background-color: rgb(187, 245, 245);\n            }\n            `;
+            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: calc(100% - 4px);\n              height: 55px;\n              background-color: white;\n              border: solid 2px;\n              border-radius: 4px;\n              border-color: rgb(7, 158, 158);\n              font-family: 'Poppins', sans-serif;\n              font-size: 22px;\n            }\n            .root:hover{\n              background-color: rgb(187, 245, 245);\n            }\n            `;
             var shadow = this.attachShadow({
                 mode: "open"
             });
@@ -783,7 +789,7 @@ function init() {
             var style = document.createElement("style");
             div.classList.add("root");
             div.textContent = label;
-            style.textContent = `\n  \n            .root{\n                display: flex;\n                flex-direction: column;\n                font-size: 18px;\n                font-family: 'Roboto', sans-serif;\n                margin: auto;\n            }\n            select{\n                display: flex;\n                min-width: 312px;\n                max-width: 353px;\n                height: 55px;\n                font-size: 18px;\n                font-family: 'Roboto', sans-serif;\n                border-radius: 4px;\n                background-color: #c3c3c3;\n                border: none;\n            }\n            `;
+            style.textContent = `\n  \n            .root{\n                display: flex;\n                flex-direction: column;\n                font-size: 18px;\n                font-family: 'Poppins', sans-serif;\n                margin: auto;\n            }\n            select{\n                display: flex;\n                min-width: 312px;\n                max-width: 353px;\n                height: 55px;\n                font-size: 18px;\n                font-family: 'Poppins', sans-serif;\n                border-radius: 4px;\n                background-color: #c3c3c3;\n                border: none;\n            }\n            `;
             div.innerHTML = `\n      <label>${label}</label>\n      <select name="select-options" id="select-options">\n        <option value="1">Piedra</option>\n        <option value="2">Papel</option>\n        <option value="3">Tijera</option>\n      </select>\n      `;
             var shadow = this.attachShadow({
                 mode: "open"
@@ -800,22 +806,17 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initRouter", ()=>initRouter
 );
-var _bienvenida = require("./pages/bienvenida");
-var _datos = require("./pages/datos");
-var _gracias = require("./pages/gracias");
+var _bienvenidaPage = require("./pages/bienvenida-page");
+var _datosPage = require("./pages/datos-page");
 const routes = [
     //rutas para cada acción posible
     {
-        path: /\/welcome/,
-        component: _bienvenida.initPageBienvenida
+        path: /\/bienvenida/,
+        component: _bienvenidaPage.initPageBienvenida
     },
     {
-        path: /\/step-1/,
-        component: _datos.initPageDatos
-    },
-    {
-        path: /\/thankyou/,
-        component: _gracias.initPageGracias
+        path: /\/datos/,
+        component: _datosPage.initPageDatos
     }, 
 ];
 function initRouter(container) {
@@ -844,55 +845,114 @@ function initRouter(container) {
     };
 }
 
-},{"./pages/bienvenida":"eSMwb","./pages/datos":"i2yZQ","./pages/gracias":"f68zC","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eSMwb":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","./pages/bienvenida-page":"328zW","./pages/datos-page":"nF7Ha"}],"328zW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initPageBienvenida", ()=>initPageBienvenida
 );
 function initPageBienvenida(params) {
     const div = document.createElement("div");
-    div.innerHTML = `\n    <titulo-el label="Te damos la bienvenida a esta página"></titulo-el>\n    <bodytext-el\n      label="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?"\n    ></bodytext-el>\n    <br />\n    <br />\n    <largetext-el\n      class="large-text"\n      label="Para continuar ingresá tu nombre"\n    ></largetext-el>\n    <br />\n    <textfield-el class="textfield" label="Nombre"></textfield-el>\n    <br />\n    <buttonsolid-el class="next" label="Comenzar"></buttonsolid-el>\n      `;
-    const button = div.querySelector(".next");
-    button.addEventListener("click", ()=>{
-        params.goTo("/step-1");
-    });
-    return div;
+    div.innerHTML = `\n    <bienvenida-page></bienvenida-page>\n      `;
+    const form = div.querySelector(".form");
+    console.log(form);
+    /*   form.addEventListener("submit", () => {
+    params.goTo("/datos");
+  }); */ return div;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"i2yZQ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"nF7Ha":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initPageDatos", ()=>initPageDatos
 );
 function initPageDatos(params) {
     const div = document.createElement("div");
-    div.innerHTML = `\n    <titulo-el label="Necesitamos algunos datos más"></titulo-el>\n    <br /><br />\n    <textfield-el class="textfield" label="Email" type=""></textfield-el>\n    <br /><br />\n    <textfield-el class="textfield" label="Comida favorita"></textfield-el>\n    <br /><br />\n    <selectfield-el label="Alguna de estas tres opciones"></selectfield-el>\n    <br /><br /><br />\n    <buttonsolid-el class="next" label="Continuar"></buttonsolid-el>\n    <br /><br /><br />\n    <buttonoutlined-el class="back" label="Volver"></buttonoutlined-el>\n      `;
-    const buttonNext = div.querySelector(".next");
-    const buttonBack = div.querySelector(".back");
-    buttonNext.addEventListener("click", ()=>{
-        params.goTo("/thankyou");
-    });
-    buttonBack.addEventListener("click", ()=>{
-        params.goTo("/welcome");
-    });
-    return div;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"f68zC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "initPageGracias", ()=>initPageGracias
-);
-function initPageGracias(params) {
-    const div = document.createElement("div");
-    div.innerHTML = `\n    <titulo-el label="Gracias"></titulo-el>\n    <largetext-el\n      class="large-text"\n      label="Toda la información que nos brindaste es muy importante"\n    ></largetext-el>\n    <buttonsolid-el class="next" label="De nada"></buttonsolid-el>\n    <br /><br /><br />\n      `;
+    div.innerHTML = `\n    <datos-page></datos-page>\n    `;
     const button = div.querySelector(".next");
     button.addEventListener("click", ()=>{
-        params.goTo("/welcome");
+        params.goTo("/bienvenida");
     });
     return div;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8uBhv","4aleK"], "4aleK", "parcelRequirea07d")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cVapm":[function(require,module,exports) {
+var _state = require("../../state");
+class Bienvenida extends HTMLElement {
+    constructor(){
+        super();
+        this.shadow = this.attachShadow({
+            mode: "open"
+        });
+        this.nombre = _state.state.getState().nombre;
+        _state.state.subscribe(()=>{
+            this.nombre = _state.state.getState().nombre;
+            this.render();
+        });
+        this.render();
+    }
+    render() {
+        this.shadow.innerHTML = `\n    <titulo-el label="Te damos la bienvenida a esta página"></titulo-el>\n    <br />\n    <br />\n    <largetext-el\n      class="large-text"\n      label="Para continuar ingresá tu nombre"\n    ></largetext-el>\n    <br />\n    <form class="form">\n    <textfield-el class="textfield" label="Nombre" name="nombre"></textfield-el>\n    <br />\n    <buttonsolid-el type="submit" name="submit" class="next" label="Comenzar"></buttonsolid-el>\n    </form>\n    `;
+        const form = this.shadow.querySelector(".form");
+        console.log(form);
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            _state.state.setState({
+                ..._state.state.getState(),
+                nombre: e.target.nombre.value
+            });
+        });
+    }
+}
+customElements.define("bienvenida-page", Bienvenida);
+
+},{"../../state":"28XHA"}],"28XHA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "state", ()=>state
+);
+const state = {
+    data: {
+        nombre: ""
+    },
+    listeners: [],
+    getState () {
+        return this.data;
+    },
+    setState (newState) {
+        this.data = newState;
+        for (const cb of this.listeners)cb();
+        console.log("soy el state, he cambiado ", this.data);
+    },
+    subscribe (callback) {
+        this.listeners.push(callback);
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3f7yE":[function(require,module,exports) {
+var _state = require("../../state");
+class Datos extends HTMLElement {
+    constructor(){
+        super();
+        this.shadow = this.attachShadow({
+            mode: "open"
+        });
+        this.nombre = "";
+        _state.state.subscribe(()=>{
+            this.syncWithState();
+        });
+        this.syncWithState();
+    }
+    syncWithState() {
+        const lastState = _state.state.getState();
+        this.nombre = lastState.nombre || "";
+        this.render();
+    }
+    render() {
+        this.shadow.innerHTML = `\n    <titulo-el label="Hola ${this.nombre}"></titulo-el>\n    <br /><br />\n    <largetext-el\n    class="large-text"\n    label="Necesitamos algunos datos más"\n    ></largetext-el>\n    <textfield-el class="textfield" label="Email" type=""></textfield-el>\n    <br /><br />\n    <textfield-el class="textfield" label="Comida favorita"></textfield-el>\n    <br /><br />\n    <selectfield-el label="Alguna de estas tres opciones"></selectfield-el>\n    <br /><br /><br />\n    <buttonsolid-el class="next" label="Enviar"></buttonsolid-el>\n    <br /><br /><br />    \n    `;
+    }
+}
+customElements.define("datos-page", Datos);
+
+},{"../../state":"28XHA"}]},["8uBhv","4aleK"], "4aleK", "parcelRequirea07d")
 
 //# sourceMappingURL=index.b31310b1.js.map

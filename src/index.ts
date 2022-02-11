@@ -9,6 +9,9 @@ import { init as ButtonOutlined } from "./components/button-outlined/index";
 import { init as footer } from "./components/footer/index";
 import { init as selectField } from "./components/select/index";
 import { initRouter } from "./router";
+import {state} from "./state"
+import "./components/bienvenida-comp"
+import "./components/datos-comp"
 
 (function main() {
   headerComp();
@@ -22,6 +25,8 @@ import { initRouter } from "./router";
   footer();
   selectField();
 
+  state.setState({nombre: "Danie"})
+  
   const root = document.querySelector(".root");
   initRouter(root);
 })();

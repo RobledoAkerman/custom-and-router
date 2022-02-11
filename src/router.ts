@@ -1,21 +1,18 @@
-import { initPageBienvenida } from "./pages/bienvenida";
-import { initPageDatos } from "./pages/datos";
-import { initPageGracias } from "./pages/gracias";
+import { initPageBienvenida } from "./pages/bienvenida-page";
+import { initPageDatos } from "./pages/datos-page";
+
 
 const routes = [
   //rutas para cada acción posible
   {
-    path: /\/welcome/,
+    path: /\/bienvenida/,
     component: initPageBienvenida,
   },
   {
-    path: /\/step-1/,
+    path: /\/datos/,
     component: initPageDatos,
   },
-  {
-    path: /\/thankyou/,
-    component: initPageGracias,
-  },
+
 ];
 
 export function initRouter(container: Element) {

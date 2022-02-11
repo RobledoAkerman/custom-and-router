@@ -18,7 +18,7 @@ export function init() {
                 display: flex;
                 flex-direction: column;
                 font-size: 18px;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 margin: auto;
             }
             select{
@@ -27,7 +27,7 @@ export function init() {
                 max-width: 353px;
                 height: 55px;
                 font-size: 18px;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 border-radius: 4px;
                 background-color: #c3c3c3;
                 border: none;

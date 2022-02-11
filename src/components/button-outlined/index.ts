@@ -24,7 +24,7 @@ export function init() {
               border: solid 2px;
               border-radius: 4px;
               border-color: rgb(7, 158, 158);
-              font-family: 'Roboto', sans-serif;
+              font-family: 'Poppins', sans-serif;
               font-size: 22px;
             }
             .root:hover{

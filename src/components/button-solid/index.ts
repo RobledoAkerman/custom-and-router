@@ -22,7 +22,7 @@ export function init() {
               height: 55px;
               background-color: rgb(7, 158, 158);
               border-radius: 4px;
-              font-family: 'Roboto', sans-serif;
+              font-family: 'Poppins', sans-serif;
               font-size: 22px;
             }
             .root:hover{
